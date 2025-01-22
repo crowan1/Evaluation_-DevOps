@@ -14,7 +14,7 @@ describe('Tests du jeu Pierre-Feuille-Ciseaux', () => {
     expect(determinerGagnant(Choix.Ciseaux, Choix.Feuille)).toBe('Vous avez gagné');
   });
 
-  test('Si on choisit la même chose', () => {
+  test('Si on choisit la même chose, c\'est une égalité', () => {
     expect(determinerGagnant(Choix.Pierre, Choix.Pierre)).toBe('Égalité !');
   });
 

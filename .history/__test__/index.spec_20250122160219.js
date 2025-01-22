@@ -10,11 +10,11 @@ describe('Tests du jeu Pierre-Feuille-Ciseaux', () => {
     expect(determinerGagnant(Choix.Feuille, Choix.Pierre)).toBe('Vous avez gagné');
   });
 
-  test('Quand je choisis Ciseaux et l\'IA choisit Feuille', () => {
+  test('Quand je choisis Ciseaux et l\'IA choisit Feuille, je gagne', () => {
     expect(determinerGagnant(Choix.Ciseaux, Choix.Feuille)).toBe('Vous avez gagné');
   });
 
-  test('Si on choisit la même chose', () => {
+  test('Si on choisit la même chose, c\'est une égalité', () => {
     expect(determinerGagnant(Choix.Pierre, Choix.Pierre)).toBe('Égalité !');
   });
 

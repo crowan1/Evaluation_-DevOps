@@ -1,26 +1,24 @@
 const { Choix, determinerGagnant, choixAleatoire } = require('../index');
 
-describe('Tests du jeu Pierre-Feuille-Ciseaux', () => {
-  
-  test('Quand je choisis Pierre et l\'IA choisit Ciseaux', () => {
+describe('Tests de Pierre-Feuille-Ciseaux', () => {
+  test('Pierre bat Ciseaux', () => {
     expect(determinerGagnant(Choix.Pierre, Choix.Ciseaux)).toBe('Vous avez gagné');
   });
 
-  test('Quand je choisis Feuille et l\'IA choisit Pierre', () => {
+  test('Feuille bat Pierre', () => {
     expect(determinerGagnant(Choix.Feuille, Choix.Pierre)).toBe('Vous avez gagné');
   });
 
-  test('Quand je choisis Ciseaux et l\'IA choisit Feuille', () => {
+  test('Ciseaux bat Feuille', () => {
     expect(determinerGagnant(Choix.Ciseaux, Choix.Feuille)).toBe('Vous avez gagné');
   });
 
-  test('Si on choisit la même chose', () => {
+  test('Égalité lorsque les choix sont identiques', () => {
     expect(determinerGagnant(Choix.Pierre, Choix.Pierre)).toBe('Égalité !');
   });
 
-  test('L\'IA choisit bien quelque chose au hasard parmi Pierre, Feuille ou Ciseaux', () => {
+  test('L\'IA génère un choix aléatoire valide', () => {
     const iaChoix = choixAleatoire();
     expect(Object.values(Choix)).toContain(iaChoix);
   });
-
 });

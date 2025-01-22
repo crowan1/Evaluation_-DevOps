@@ -11,8 +11,8 @@ const Choix = {
   
     const gagnant = {
       [Choix.Pierre]: [Choix.Ciseaux],   // Pierre > Ciseaux
-      [Choix.Feuille]: [Choix.Pierre],   // Feuille > Pierre
-      [Choix.Ciseaux]: [Choix.Feuille], // Ciseaux > Feuille
+      [Choix.Feuille]: [Choix.Pierre],   // Feuille bat Pierre
+      [Choix.Ciseaux]: [Choix.Feuille], // Ciseaux bat Feuille
     };
   
     // Vérif si joueur gagne

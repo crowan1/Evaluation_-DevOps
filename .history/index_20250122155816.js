@@ -10,18 +10,18 @@ const Choix = {
     }
   
     const gagnant = {
-      [Choix.Pierre]: [Choix.Ciseaux],   // Pierre > Ciseaux
-      [Choix.Feuille]: [Choix.Pierre],   // Feuille > Pierre
-      [Choix.Ciseaux]: [Choix.Feuille], // Ciseaux > Feuille
+      [Choix.Pierre]: [Choix.Ciseaux],   // Pierre bat Ciseaux
+      [Choix.Feuille]: [Choix.Pierre],   // Feuille bat Pierre
+      [Choix.Ciseaux]: [Choix.Feuille], // Ciseaux bat Feuille
     };
   
-    // Vérif si joueur gagne
+    // Vérifie si le choix du joueur bat celui de l'IA
     if (gagnant[choixJoueur].includes(choixIA)) {
-      return "Vous avez gagné";
+      return "Le joueur gagne !";
     }
   
     // Sinon
-    return "L'IA à gagné";
+    return "L'IA gagne !";
   }
   
   function choixAleatoire() {
